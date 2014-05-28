@@ -1,30 +1,30 @@
-**AWESOME-SWITCH-MODE**
+# AWESOME-SWITCH-MODE
 
 Ce dépôt contient des fichier de ma configuration **_AWESOME_** (Le gestionnaire de fenêtres )
 
 Pour qui ne le connait pas :
-http://awesome.naquadah.org/
+http://awesome.naquadah.org/ ou 
 http://www.linuxpedia.fr/doku.php/awesome
 
-Je travaille et je l'utilise ou l'ai utilisé sous Debian 6 et 7, Ubuntu 11.04 et 12.04
+Je travaille et je l'utilise ou l'ai utilisé sous **DEBIAN 6 et 7, UBUNTU 11.04 et 12.04**
 
-**Pourquoi _awesome-switch-mode_**
+## Pourquoi  awesome-switch-mode
 
-Au demarrage de *awesome* je charge des applets comme *nm-applet* et à chaque fois que je recharge *awesome* (comme quand j'execute *xrandr*) *nm-applet* est dupliqué (ça peut sans doute arriver à d'autres applets).
+Au demarrage de **_awesome_** je charge des applets comme **_nm-applet_** et à chaque fois que je recharge **_awesome_** (comme quand j'execute **_xrandr_**) **_nm-applet_** est dupliqué (ça peut sans doute arriver à d'autres applets).
 
-Pour eviter ça j'ai mis en place un système avec deux modes de config *awesome* :
+Pour eviter ça j'ai mis en place un système avec deux modes de config **_awesome_** :
 * **mod-clean** config à charger au demarrage
 * **mod-test** config pour effectuer des tests
 
-Si je relance **_AWESOME_** en *mod-clean* certains des applets sont chargé en double.
+Si je relance **_awesome_** en **mod-clean** certains des applets sont chargé en double.
 
-Le *mod-test* me permet de relancer **_AWESOME_** sans charger en double les applets trop volontaires ;)
+Le **mod-test** me permet de relancer **_awesome_** sans charger en double les applets trop volontaires ;)
 
 Je m'en sert par exemple pour tester un nouveau fond d'écran au moment de relancer awesome.
 
 A la fin de mon **rc.lua** j'include un autre fichier de configuration qui charge des applets **rc-include.lua**.
 
-Je switch d'un mode à l'autre en changent la cible du lien *rc-include.lua*
+Je switch d'un mode à l'autre en changent la cible du lien **rc-include.lua**
 
 Dans ce dépôt vous trouverez :
 * mon *rc.lua* (regardez la fin et eventuellement la section Key Bindings)
@@ -37,20 +37,20 @@ Dans ce dépôt vous trouverez :
     * *toggle-mod.sh*
 
 
-**COMMENT METTRE EN PLACE LES MODES AWESOME**
+## COMMENT METTRE EN PLACE LES MODES AWESOME
 
-On travaille dans le dossier *~/.config/awesome/*
+On travaille dans le dossier **~/.config/awesome/**
 
 * Créer un fichier *mod-clean.lua* dans lequel vous appellé les applets exterieur à awesome; comme nm-applet par exemple (regardez mon *mod-clean.lua* à guise d'exemple)
 
 * Créer un fichier *mod-test.lua* dans lequel vous ne mettez RIEN ou à la limite des commentaire avec des applets que vous voudrez utiliser un jour (regardez mon *mod-test.lua* à guise d'exemple)
 
 * Créer un lien symbolique vers *mod-clean.lua* nommé *rc-include.lua* :
-    ```bash
+    ```shell
     ln -s mod-clean.lua rc-include.lua
     ```
 
-* Dans rc.lua à la fin on fait un include de *rc-include.lua* :
+* Dans *rc.lua* à la fin faire un include de *rc-include.lua* :
     ```lua
     -- {{
     -- rc-include ( apllet à ne pas charger plusieurs fois )
@@ -58,12 +58,12 @@ On travaille dans le dossier *~/.config/awesome/*
     --}}
     ```
 
-* Pour passer au mod-test :
-    ```bash
+* Pour passer au *mod-test* :
+    ```shell
     ln -sf mod-test.lua rc-include.lua
     ```
      
-**Pour mettre en place des raccourcis pour changer rapidement de mode :**
+### Pour mettre en place des raccourcis pour changer rapidement de mode :
 
 * Copier les trois scripts qui sont dans le dossier *scripts/* dans votre *~/.config/awesome/scripts/*
 
