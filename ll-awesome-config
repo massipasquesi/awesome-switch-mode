@@ -1,0 +1,14 @@
+massi@flyingbear:~/.config/awesome$ ll
+total 56
+drwxr-xr-x  6 massi massi  4096 mai   27 17:46 ./
+drwxr-xr-x 43 massi massi  4096 mai   23 13:33 ../
+-rw-rw-r--  1 massi massi  3965 avril  2 18:24 calendar2.lua
+-rw-rw-r--  1 massi massi   357 avril 17 19:13 mod-clean.lua
+-rw-rw-r--  1 massi massi   816 avril  8 15:56 mod-test.lua
+drwxr-xr-x  3 massi massi  4096 mars  22 17:20 precious/
+lrwxrwxrwx  1 massi massi    13 mai   27 17:16 rc-include.lua -> mod-clean.lua
+-rw-r--r--  1 massi massi 17779 mai   17 17:08 rc.lua
+drwxrwxr-x  2 massi massi  4096 mai   27 18:11 scripts/
+drwxr-xr-x  6 massi massi  4096 nov.  28 19:04 themes/
+drwxr-xr-x  3 massi massi  4096 avril  2 18:24 utils/
+
